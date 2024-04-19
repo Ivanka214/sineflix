@@ -162,4 +162,16 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPage--;
         displayMovies();
     });
+
+    const logoutButton = document.querySelector("#menu4 button");
+    // Button logout
+    logoutButton.addEventListener("click", function() {
+        // Pesan Konfirmasi Logout
+        const isLogout = confirm("Anda yakin ingin keluar?");
+        // Jika menekan tombol "OK" akan diarahkan ke homepage
+        if (isLogout) {
+            location.href = "/index.html";
+        }
+    });
+
 });
